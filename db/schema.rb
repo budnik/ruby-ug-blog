@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121204190159) do
+ActiveRecord::Schema.define(:version => 20121205071752) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -19,5 +19,21 @@ ActiveRecord::Schema.define(:version => 20121204190159) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "users", :force => true do |t|
+    t.integer  "sign_in_count",      :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "uid"
+    t.string   "provider"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
+
+  add_index "users", ["name"], :name => "index_users_on_name"
+  add_index "users", ["uid"], :name => "index_users_on_uid", :unique => true
 
 end
