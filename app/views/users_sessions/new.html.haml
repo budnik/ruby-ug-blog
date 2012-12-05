@@ -1,0 +1,3 @@
+%h3 Why don't you login with:
+-%w[facebook google yandex].each do |provider|
+  =link_to provider.humanize, user_omniauth_authorize_path(provider)

@@ -20,3 +20,4 @@ gem 'omniauth-yandex'
 gem 'omniauth-google'
 
 gem 'sextant'
+gem 'pry'

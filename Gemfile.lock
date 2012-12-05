@@ -34,6 +34,7 @@ GEM
       railties (~> 3.1)
     builder (3.0.4)
     cancan (1.6.8)
+    coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -68,6 +69,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.4.0)
     multipart-post (1.1.5)
@@ -98,6 +100,10 @@ GEM
       omniauth-oauth2 (~> 1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
+    pry (0.9.10)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.3.1)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -129,6 +135,7 @@ GEM
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    slop (3.3.3)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -162,6 +169,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-google
   omniauth-yandex
+  pry
   rails (= 3.2.9)
   sextant
   simple_form
