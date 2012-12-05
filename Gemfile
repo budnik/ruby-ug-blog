@@ -18,3 +18,5 @@ gem 'cancan'
 gem 'omniauth-facebook'
 gem 'omniauth-yandex'
 gem 'omniauth-google'
+
+gem 'sextant'
