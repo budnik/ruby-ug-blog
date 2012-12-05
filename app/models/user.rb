@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :trackable
-
+  has_many :posts, :inverse_of => :author, :foreign_key => :author_id
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :provider, :uid
   # attr_accessible :title, :body
