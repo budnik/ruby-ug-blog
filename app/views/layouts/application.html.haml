@@ -61,7 +61,9 @@
                 %li.nav-header
                   New users
                 - @last_users.each do |u|
-                  %li=link_to_if u.posts.present?, u.name, posts_path( :author => u)
+                  %li
+                    =image_tag "#{u.provider}.png", :class=>"pull-right mini-provider-logo"
+                    =link_to_if u.posts.present?, u.name, posts_path( :author => u)
 
         .span8
           - flash.each do |name, msg|
