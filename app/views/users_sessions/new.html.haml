@@ -1,3 +1,9 @@
-%h3 Why don't you login with:
--%w[facebook google yandex].each do |provider|
-  =link_to provider.humanize, user_omniauth_authorize_path(provider)
+.row.offset1
+  .span6
+    %h3 Why don't you login with:
+.row.offset1
+  -%w[facebook google yandex].each do |provider|
+    .span2
+      =link_to user_omniauth_authorize_path(provider) do
+        .row=image_tag("#{provider}.png")
+        .row=provider.humanize 
