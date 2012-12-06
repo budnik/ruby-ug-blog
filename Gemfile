@@ -14,10 +14,13 @@ gem 'haml'
 gem 'simple_form'
 
 gem 'devise'
-gem 'cancan'
 gem 'omniauth-facebook'
 gem 'omniauth-yandex'
 gem 'omniauth-google'
 
-gem 'sextant'
-gem 'pry'
+gem 'cancan'
+
+group :development do
+  gem 'sextant'
+  gem 'pry'
+end
