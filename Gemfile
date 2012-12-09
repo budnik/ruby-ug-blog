@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.9'
 gem 'sqlite3', :group => [:development, :test]
+gem 'pg', :group => :production
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
