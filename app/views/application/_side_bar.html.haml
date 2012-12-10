@@ -7,7 +7,9 @@
         %li{:class=> p.present?&&p == @post ? "active" : ''}
           =link_to post_path(p), {title:p.title} do
             = p.title.size>17 ? p.title[0..16]+?\u2026 : p.title
-            %span.muted.pull-right=time_ago_in_words(p.updated_at)
+            %span.muted.pull-right
+              =time_ago_in_words(p.updated_at)
+              ago
     -unless @last_users.blank?
       %li.nav-header
         New users
