@@ -56,3 +56,16 @@ button img{
 .brand strong{
   color: darkred;
 }
+
+.well.sidebar-nav{
+  position: fixed;
+  width: 270px;
+}
+
+#github-ribbon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 1040;
+}
