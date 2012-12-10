@@ -1,0 +1,17 @@
+.well.sidebar-nav
+  %ul.nav.nav-list
+    -unless @last_posts.blank?
+      %li.nav-header
+        Last Posts
+      - @last_posts.each do |p|
+        %li{:class=> p.present?&&p == @post ? "active" : ''}
+          =link_to post_path(p), {title:p.title} do
+            = p.title.size>17 ? p.title[0..16]+?\u2026 : p.title
+            %span.muted.pull-right=time_ago_in_words(p.updated_at)
+    -unless @last_users.blank?
+      %li.nav-header
+        New users
+      - @last_users.each do |u|
+        %li.user
+          =link_to_if u.posts.present?, image_tag("#{u.provider}.png", :class=>"mini-provider-logo pull-right") + u.name, posts_path( :author => u) do |i|
+            .inactive=i

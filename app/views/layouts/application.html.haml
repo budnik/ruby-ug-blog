@@ -20,7 +20,7 @@
           -if user_signed_in?
             .btn-group.pull-right
               %button#logout-btn.btn.span2.dropdown-toggle{"data-toggle" => "dropdown",
-                                          :href=>"#"}
+                                                           "href"        => "#"}
                 =image_tag "#{current_user.provider}.png", :class=>"mini-provider-logo"
                 %span.username=current_user.name
                 %span.caret.pull-right
@@ -47,28 +47,12 @@
     .container-fluid
       .row-fluid
         .span3.pull-right.offset1
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              -unless @last_posts.blank?
-                %li.nav-header
-                  Last Posts
-                - @last_posts.each do |p|
-                  %li{:class=> p.present?&&p == @post ? "active" : ''}
-                    =link_to post_path(p), {title:p.title} do
-                      = p.title.size>17 ? p.title[0..16]+?\u2026 : p.title
-                      %span.muted.pull-right=time_ago_in_words(p.updated_at)
-              -unless @last_users.blank?
-                %li.nav-header
-                  New users
-                - @last_users.each do |u|
-                  %li
-                    =image_tag "#{u.provider}.png", :class=>"pull-right mini-provider-logo"
-                    =link_to_if u.posts.present?, u.name, posts_path( :author => u)
-
+          =render :partial=>"side_bar"
         .span8
           - flash.each do |name, msg|
-            = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
-              %a.close{:href => "#", :"data-dismiss" => "alert"} ×
+            = content_tag :div,
+                          :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
+              %a.close{ "href" => "#", "data-dismiss" => "alert" } ×
               = msg
           = yield
       %hr

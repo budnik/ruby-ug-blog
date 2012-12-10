@@ -35,3 +35,20 @@ img.mini-provider-logo{
 #logout-btn span.caret{
   margin-top: 10px;
 }
+button#logout-btn{
+  height: 25px;
+}
+button img{
+  margin-left: -1px;
+}
+
+.sidebar-nav li.user + li.user{
+  padding-top: 7px;
+}
+.sidebar-nav li.user div.inactive:hover{
+  text-decoration: none;
+  background-color: #eeeeee;
+  padding: 0 15px;
+  margin: 0 -15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
