@@ -4,10 +4,12 @@ class Ability
   def initialize(user)
     user ||= User.new # guest user (not logged in)
 
-    unless user.persisted?
-        can :read, :all?
-    else
-        #Add ability for loged in user
+    if user.persisted?
+      #Add ability for loged in user
+      can :manage, Post, :author_id => user.id
+      can :create, Post
     end
+
+    can :read, :all
   end
 end
