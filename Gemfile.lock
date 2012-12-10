@@ -29,7 +29,12 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    awesome_print (1.1.0)
     bcrypt-ruby (3.0.1)
+    better_errors (0.0.8)
+      coderay
+      erubis
+    binding_of_caller (0.6.8)
     bootstrap-generators (2.2.1)
       railties (~> 3.1)
     builder (3.0.4)
@@ -161,6 +166,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
+  better_errors
+  binding_of_caller
   bootstrap-generators
   cancan
   coffee-rails (~> 3.2.1)

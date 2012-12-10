@@ -22,6 +22,9 @@ gem 'omniauth-google'
 gem 'cancan'
 
 group :development do
+  gem 'awesome_print'
   gem 'sextant'
   gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
